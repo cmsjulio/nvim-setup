@@ -26,7 +26,10 @@ set path+=**
 " Display all matching files when we tab complete
 set wildmenu
 
-" Create the 'tags' file (installing tags is required)
+" To always use clipboard for all operations
+set clipboard+=unnamedplus
+
+
 command! MakeTags !ctags -R .
 "
 " TWEAKS FOR BROWSING -- SETTING NETWR UP PROPERLY
