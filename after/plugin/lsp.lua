@@ -1,5 +1,4 @@
 local lsp_zero = require('lsp-zero')
-
 lsp_zero.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
@@ -15,3 +14,4 @@ require('mason-lspconfig').setup({
     lsp_zero.default_setup,
   },
 })
+

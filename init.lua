@@ -50,7 +50,12 @@ local plugins = {
 {'hrsh7th/cmp-nvim-lsp'},
 {'hrsh7th/nvim-cmp'},
 {'L3MON4D3/LuaSnip'},
- "lewis6991/gitsigns.nvim"  
+ "lewis6991/gitsigns.nvim",
+{
+ "folke/trouble.nvim",
+ dependencies = { "nvim-tree/nvim-web-devicons" }}
+
+
 }
 
 local opts = {}
