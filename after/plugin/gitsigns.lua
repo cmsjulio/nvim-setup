@@ -1,4 +1,4 @@
-print("gitsigns loaded")
+--print("gitsigns loaded")
 
 
     require('gitsigns').setup {
