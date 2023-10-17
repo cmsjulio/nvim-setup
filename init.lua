@@ -16,7 +16,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-    'onsails/diaglist.nvim',
 	{'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	-- or                            , branch = '0.1.x',
 	dependencies = { {'nvim-lua/plenary.nvim'} } },
@@ -51,9 +50,9 @@ local plugins = {
 {'hrsh7th/nvim-cmp'},
 {'L3MON4D3/LuaSnip'},
  "lewis6991/gitsigns.nvim",
-{
- "folke/trouble.nvim",
- dependencies = { "nvim-tree/nvim-web-devicons" }}
+{    "nvim-telescope/telescope-file-browser.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" , "nvim-tree/nvim-web-devicons"}
+}
 
 
 }
