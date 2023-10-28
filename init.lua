@@ -41,8 +41,13 @@ local plugins = {
 'theprimeagen/harpoon',
 'mbbill/undotree',
 'tpope/vim-fugitive',
+'mfussenegger/nvim-jdtls',
 {'williamboman/mason.nvim'},
 {'williamboman/mason-lspconfig.nvim'},
+
+  -- Debugging
+'mfussenegger/nvim-dap',
+'rcarriga/cmp-dap',
 
 {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
 {'neovim/nvim-lspconfig'},
