@@ -1,4 +1,3 @@
-print ('cmp loaded')
 local cmp = require('cmp')
 cmp.setup {
   -- Configuration
