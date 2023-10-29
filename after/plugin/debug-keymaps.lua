@@ -40,21 +40,34 @@ function get_spring_boot_runner(profile, debug)
   return 'mvn spring-boot:run ' .. profile_param .. debug_param
 end
 
+function run_spring_boot_ask_profile(debug)
+    vim.cmd('tabnew')
+    local profile = vim.fn.input("Profile: ")
+    vim.cmd('term ' .. get_spring_boot_runner(profile, debug))
+end
+
 function run_spring_boot(debug)
-  vim.cmd('term ' .. get_spring_boot_runner(method_name, debug))
+    vim.cmd('tabnew')
+    vim.cmd('term ' .. get_spring_boot_runner(method_name, debug))
+end
+
+function run_docker_compose()
+    vim.cmd('tabnew')
+    vim.cmd('term docker compose up') 
 end
 
 vim.keymap.set("n", "<leader>tm", function() run_java_test_method() end)
 vim.keymap.set("n", "<leader>TM", function() run_java_test_method(true) end)
 vim.keymap.set("n", "<leader>tc", function() run_java_test_class() end)
 vim.keymap.set("n", "<leader>TC", function() run_java_test_class(true) end)
-vim.keymap.set("n", "<F9>", function() run_spring_boot() end)
-vim.keymap.set("n", "<F10>", function() run_spring_boot(true) end)
+vim.keymap.set("n", "<F10>", function() run_spring_boot(true) end) --debug mode=true
+vim.keymap.set("n", "<F11>", function() run_docker_compose() end)
+vim.keymap.set("n", "<F12>", function() run_spring_boot_ask_profile() end)
 
 -- setup debug
-key_map('n', '<leader>bp', ':lua require"dap".toggle_breakpoint()<CR>')
-key_map('n', '<leader>Bp', ':lua require"dap".set_breakpoint(vim.fn.input("Condition: "))<CR>')
-key_map('n', '<leader>bl', ':lua require"dap".set_breakpoint(nil, nil, vim.fn.input("Log: "))<CR>')
+key_map('n', '<leader>nb', ':lua require"dap".toggle_breakpoint()<CR>')
+key_map('n', '<leader>nbc', ':lua require"dap".set_breakpoint(vim.fn.input("Condition: "))<CR>')
+key_map('n', '<leader>nbl', ':lua require"dap".set_breakpoint(nil, nil, vim.fn.input("Log: "))<CR>')
 key_map('n', '<leader>dr', ':lua require"dap".repl.open()<CR>')
 
 -- view informations in debug
@@ -65,9 +78,9 @@ end
 key_map('n', 'sd', ':lua show_dap_centered_scopes()<CR>')
 
 -- move in debug
-key_map('n', '<F5>', ':lua require"dap".continue()<CR>')
+key_map('n', '<F9>', ':lua require"dap".continue()<CR>')
 key_map('n', '<F8>', ':lua require"dap".step_over()<CR>')
-key_map('n', '<F7>', ':lua require"dap".step_into()<CR>')
+key_map('n', '<F5>', ':lua require"dap".step_into()<CR>')
 key_map('n', '<S-F8>', ':lua require"dap".step_out()<CR>')
 
 
