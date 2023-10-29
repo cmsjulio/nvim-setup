@@ -45,6 +45,11 @@ local plugins = {
 {'williamboman/mason.nvim'},
 {'williamboman/mason-lspconfig.nvim'},
 
+-- lualine for cooler status bar
+{
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+},
 -- DB integration
 {
   'kristijanhusak/vim-dadbod-ui',
