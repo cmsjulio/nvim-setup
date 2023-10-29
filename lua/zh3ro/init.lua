@@ -1,5 +1,5 @@
 require("zh3ro.set")
-print('loaded')
+require("zh3ro.custom-bindings")
 local vimrc = vim.fn.stdpath("config") .. "/lua/zh3ro/vimrc.vim"
 
 vim.cmd('nnoremap <silent> <A-j> :<C-u>call append(line("."),   repeat([""], v:count1))<CR>')
