@@ -1,5 +1,7 @@
 ### nvim setup
 
+jetbrains mono nerd font from nerd fonts -> donwload it and set it as terminator's profile font 
+
 helping myself by making this available
 
 note to self: sdkman for the win
