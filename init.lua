@@ -72,7 +72,7 @@ local plugins = {
   -- Debugging
 'mfussenegger/nvim-dap',
 'rcarriga/cmp-dap',
-
+{ "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
 {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
 {'neovim/nvim-lspconfig'},
 {'hrsh7th/cmp-nvim-lsp'},
