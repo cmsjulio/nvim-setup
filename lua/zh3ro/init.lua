@@ -7,7 +7,7 @@ vim.cmd('nnoremap <silent> <A-j> :<C-u>call append(line("."),   repeat([""], v:c
 vim.cmd('nnoremap <silent> <A-k> :<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>')
 
 vim.cmd('nnoremap <silent> <c-t> :lua vim.cmd("tabnew")<CR>')
-vim.cmd('nnoremap <silent> <leader>w :bdelete!<CR>')
+vim.cmd('nnoremap <silent> <c-w> :bdelete!<CR>')
 vim.cmd('nnoremap <silent> " :tabnext<CR>')
 vim.cmd('nnoremap <silent> <s-tab> :tabprevious<CR>')
 
