@@ -47,8 +47,9 @@ function run_spring_boot_ask_profile(debug)
 end
 
 function run_spring_boot(debug)
+    local profile = vim.fn.input("Profile: ")
     vim.cmd('tabnew')
-    vim.cmd('term ' .. get_spring_boot_runner(method_name, debug))
+    vim.cmd('term ' .. get_spring_boot_runner(profile, debug))
 end
 
 function run_docker_compose()
@@ -69,6 +70,8 @@ key_map('n', '<leader>nb', ':lua require"dap".toggle_breakpoint()<CR>')
 key_map('n', '<leader>nbc', ':lua require"dap".set_breakpoint(vim.fn.input("Condition: "))<CR>')
 key_map('n', '<leader>nbl', ':lua require"dap".set_breakpoint(nil, nil, vim.fn.input("Log: "))<CR>')
 key_map('n', '<leader>dr', ':lua require"dap".repl.open()<CR>')
+
+-- vim.fn.sign_define('DapBreakpoint', { text='🔴', texthl='DapBreakpoint', linehl='DapBreakpoint', numhl='DapBreakpoint' })
 
 -- view informations in debug
 function show_dap_centered_scopes()
