@@ -1,5 +1,5 @@
-require("zh3ro")
 vim.g.mapleader = " "
+require("zh3ro")
 vim.keymap.set("n", "<leader>v", vim.cmd.Ex)
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
