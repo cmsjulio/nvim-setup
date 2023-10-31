@@ -1,5 +1,7 @@
 ### nvim setup
 
+for F11 shortcut to work, remember to UNBIND it to fullscreen no terminator;
+
 jetbrains mono nerd font from nerd fonts -> donwload it and set it as terminator's profile font 
 
 helping myself by making this available
