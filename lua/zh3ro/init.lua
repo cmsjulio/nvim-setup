@@ -13,3 +13,10 @@ vim.cmd('nnoremap <silent> <s-tab> :tabprevious<CR>')
 
 -- select all with <c-a>
 vim.cmd('nnoremap <silent> <c-a> ggVG')
+
+
+-- Esc in terminal mode (:ter) send back to normal mode
+vim.cmd('tnoremap <silent> <Esc> <C-\\><c-n>')
+
+
+
