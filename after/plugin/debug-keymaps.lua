@@ -17,12 +17,14 @@ end
 function run_java_test_method(debug)
   local utils = require'utils'
   local method_name = utils.get_current_full_method_name("\\#")
+  vim.cmd('tabnew')
   vim.cmd('term source "$HOME/.sdkman/bin/sdkman-init.sh" && sdk env && ' .. get_test_runner(method_name, debug))
 end
 
 function run_java_test_class(debug)
   local utils = require'utils'
   local class_name = utils.get_current_full_class_name()
+  vim.cmd('tabnew')
   vim.cmd('term source "$HOME/.sdkman/bin/sdkman-init.sh" && sdk env && ' .. get_test_runner(class_name, debug))
 end
 
