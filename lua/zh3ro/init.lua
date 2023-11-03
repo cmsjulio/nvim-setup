@@ -22,7 +22,7 @@ vim.cmd('nnoremap <silent> <leader>j <c-w>j')
 vim.cmd('nnoremap <silent> <leader>k <c-w>k')
 vim.cmd('nnoremap <silent> <leader>l <c-w>l')
 vim.cmd('nnoremap <silent> <leader>o :tabnew %<CR>')
-vim.cmd('nnoremap <silent> <leader>c <c-w>c')
+vim.cmd('nnoremap <silent> <leader>c :tabclose<CR>')
 vim.cmd('nnoremap <silent> <leader>w <c-6>') --reopen last visited buffer
 -- select all with <c-a>
 vim.cmd('nnoremap <silent> <c-a> ggVG')
