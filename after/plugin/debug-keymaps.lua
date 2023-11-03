@@ -17,13 +17,13 @@ end
 function run_java_test_method(debug)
   local utils = require'utils'
   local method_name = utils.get_current_full_method_name("\\#")
-  vim.cmd('term ' .. get_test_runner(method_name, debug))
+  vim.cmd('term source "$HOME/.sdkman/bin/sdkman-init.sh" && sdk env && ' .. get_test_runner(method_name, debug))
 end
 
 function run_java_test_class(debug)
   local utils = require'utils'
   local class_name = utils.get_current_full_class_name()
-  vim.cmd('term ' .. get_test_runner(class_name, debug))
+  vim.cmd('term source "$HOME/.sdkman/bin/sdkman-init.sh" && sdk env && ' .. get_test_runner(class_name, debug))
 end
 
 function get_spring_boot_runner(profile, debug)
@@ -43,13 +43,13 @@ end
 function run_spring_boot_ask_profile(debug)
     vim.cmd('tabnew')
     local profile = vim.fn.input("Profile: ")
-    vim.cmd('term ' .. get_spring_boot_runner(profile, debug))
+    vim.cmd('term source "$HOME/.sdkman/bin/sdkman-init.sh" && sdk env && ' .. get_spring_boot_runner(profile, debug))
 end
 
 function run_spring_boot(debug)
     local profile = vim.fn.input("Profile: ")
     vim.cmd('tabnew')
-    vim.cmd('term ' .. get_spring_boot_runner(profile, debug))
+    vim.cmd('term source "$HOME/.sdkman/bin/sdkman-init.sh" && sdk env && ' .. get_spring_boot_runner(profile, debug))
 end
 
 function run_docker_compose()
