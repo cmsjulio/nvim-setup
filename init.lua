@@ -50,6 +50,31 @@ local plugins = {
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 },
+{
+  "nomnivore/ollama.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+  },
+
+  -- All the user commands added by the plugin
+  cmd = { "Ollama", "OllamaModel", "OllamaServe", "OllamaServeStop" },
+
+  -- Sample keybind for prompting. Note that the <c-u> is important for selections to work properly.
+  keys = {
+    {
+      "<leader>ia",
+      ":<c-u>lua require('ollama').prompt()<cr>",
+      desc = "ollama prompt",
+      mode = { "n", "v" },
+    },
+  },
+
+  ---@type Ollama.Config
+  opts = {
+    model = "codellama:instruct"
+    -- your configuration overrides
+  }
+},
 -- DB integration
 {
   'kristijanhusak/vim-dadbod-ui',
