@@ -98,6 +98,14 @@ local plugins = {
         end,
     },
 
+    -- Installing MarkdownPreview
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
+    },
+
     -- Debugging
     'mfussenegger/nvim-dap',
     'rcarriga/cmp-dap',
