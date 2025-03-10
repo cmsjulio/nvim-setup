@@ -35,7 +35,7 @@ local config = {
   -- The command that starts the language server
   -- See: https://github.com/eclipse/eclipse.jdt.ls#running-from-the-command-line
   cmd = {
-    home .. '/.sdkman/candidates/java/19.0.1-open/bin/java',
+    home .. '/.sdkman/candidates/java/21.0.2-amzn/bin/java',
     '-Declipse.application=org.eclipse.jdt.ls.core.id1',
     '-Dosgi.bundles.defaultStartLevel=4',
     '-Declipse.product=org.eclipse.jdt.ls.core.product',
@@ -61,7 +61,7 @@ local config = {
   -- for a list of options
   settings = {
     java = {
-      home = home ..  '/.sdkman/candidates/java/19.0.1-open',
+      home = home ..  '/.sdkman/candidates/java/21.0.2-amzn',
       eclipse = {
         downloadSources = true,
       },
@@ -70,15 +70,19 @@ local config = {
         runtimes = {
           {
             name = "JavaSE-1.8",
-            path = home .. "/.sdkman/candidates/java/8.0.352-amzn",
+            path = home .. "/.sdkman/candidates/java/8.0.442-amzn",
           },
           {
             name = "JavaSE-17",
-            path = home .. "/.sdkman/candidates/java/17.0.7-amzn",
+            path = home .. "/.sdkman/candidates/java/17.0.14-amzn",
           },
           {
             name = "JavaSE-19",
             path = home .. "/.sdkman/candidates/java/19.0.1-open",
+          },
+          {
+            name = "JavaSE-21",
+            path = home .. "/.sdkman/candidates/java/21.0.2-amzn",
           }
         }
       },
