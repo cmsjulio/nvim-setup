@@ -42,6 +42,7 @@ local plugins = {
         },
         cmd = { "TSUpdateSync" }
     },
+{ "nvim-neotest/nvim-nio" },
     'theprimeagen/harpoon',
     'mbbill/undotree',
     'tpope/vim-fugitive',
