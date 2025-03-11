@@ -5,7 +5,19 @@ sudo apt-get install gcc
 
 for F11 shortcut to work, remember to UNBIND it to fullscreen no terminator;
 
+to see icons while using telescope file browser, install fonts on 'ASSETS' directory and restart
+copy assets to to ~./local/share/fonts
 jetbrains mono nerd font from nerd fonts -> donwload it and set it as terminator's profile font 
+fiz sudo apt-get install fonts-material-design-icons-iconfont pra instalar fontes no ubuntu
+
+debuggin with java:
+download microsoft java debug in home/Downloads from releases and check README.md for info no how to build it -- 'mvnw clean install' on root
+check ftplugin/java.lua as below, fixing path:
+  ...
+  init_options = {
+    bundles = {vim.fn.glob(home .. "/Downloads/java-debug-0.49.0/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.49.0.jar", 1)},
+  },
+  ...
 
 helping myself by making this available
 
@@ -30,10 +42,6 @@ Lombok solved with mason installation, add -javaagent:$HOME/.local/share/java to
                  "--add-modules=ALL-SYSTEM",
                  "--add-opens", "java.base/java.util=ALL-UNNAMED",
                  "--add-opens", "java.base/java.lang=ALL-UNNAMED"] \
-
-To see icons while using telescope file browser, install fonts on 'assets' directory and restart
-
-fiz sudo apt-get install fonts-material-design-icons-iconfont pra instalar fontes no ubuntu
 
 set jdtls up without mason-lspconfig so that i can futher extend config to ensure DAP works with it;
 
