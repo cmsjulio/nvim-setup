@@ -3,6 +3,9 @@
 c compiler for treesitter:
 sudo apt-get install gcc
 
+para o Telescope funcionar direito, fazer:
+sudo apt-get install ripgrep
+
 for F11 shortcut to work, remember to UNBIND it to fullscreen no terminator;
 
 to see icons while using telescope file browser, install fonts on 'ASSETS' directory and restart
